@@ -12,46 +12,46 @@
 <link rel="preload" as="image" href="assets/capa.webp" fetchpriority="high">
 <style>
   :root{
-    --cream:#faf6f1;
-    --tan:#e9dfd2;
-    --ink:#2c1a1f;
-    --forest:#1f3b3a;
-    --terracotta:#7a1f2b;
-    --terracotta-2:#96313d;
-    --gold:#b8894a;
-    --gold-soft:#e7d3b3;
-    --rose:#f1e4e4;
+    --cream:#f6f4ef;
+    --tan:#e2ecec;
+    --ink:#123b42;
+    --forest:#0e2f35;
+    --teal:#12707c;
+    --teal-2:#0d5a64;
+    --gold:#c79a4e;
+    --gold-soft:#ecdcb6;
+    --rose:#dcebed;
     --paper:#ffffff;
-    --line:#ece2d6;
-    --muted:#6b5a55;
+    --line:#e2e8e6;
+    --muted:#516066;
     --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
     --display:'Cormorant Garamond','Playfair Display',Georgia,serif;
     --radius:16px;
-    --shadow:0 14px 40px rgba(44,26,31,.09);
-    --shadow-lg:0 26px 70px rgba(44,26,31,.16);
+    --shadow:0 14px 40px rgba(18,59,66,.09);
+    --shadow-lg:0 26px 70px rgba(18,59,66,.16);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.68;font-size:16.5px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   img{max-width:100%;display:block}
   a{text-decoration:none;color:inherit}
   .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
   section{padding:80px 0;content-visibility:auto;contain-intrinsic-size:auto 800px}
-  h1,h2,h3{font-family:var(--display);line-height:1.12;color:var(--ink);font-weight:600}
+  h1,h2,h3{font-family:var(--display);line-height:1.12;color:var(--ink);font-weight:600;letter-spacing:.2px}
 
-  .eyebrow{display:inline-block;background:var(--rose);color:var(--terracotta);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 16px;border-radius:50px}
+  .eyebrow{display:inline-block;background:var(--rose);color:var(--teal);font-family:var(--sans);font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 16px;border-radius:50px}
   .head{text-align:center;max-width:720px;margin:0 auto 8px}
   .head .eyebrow{margin-bottom:20px}
-  h2.tit{font-size:clamp(30px,4.4vw,44px);font-weight:600}
-  h2.tit em{font-style:italic;color:var(--terracotta)}
-  p.sub{color:var(--muted);max-width:640px;margin:16px auto 0;font-size:18px}
+  h2.tit{font-size:clamp(31px,4.5vw,45px);font-weight:600}
+  h2.tit em{font-style:italic;color:var(--teal)}
+  p.sub{color:var(--muted);max-width:650px;margin:16px auto 0;font-size:18.5px}
 
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--terracotta);color:#fff;font-family:var(--sans);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:1px;padding:17px 34px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 12px 30px -10px rgba(122,31,43,.6);transition:transform .15s,background .2s}
-  .btn:hover{background:var(--terracotta-2);transform:translateY(-2px)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--teal);color:#fff;font-family:var(--sans);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:1px;padding:17px 34px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 12px 30px -10px rgba(18,112,124,.6);transition:transform .15s,background .2s}
+  .btn:hover{background:var(--teal-2);transform:translateY(-2px)}
   .btn.pulse{animation:pulseCta 2.4s infinite}
-  @keyframes pulseCta{0%,100%{box-shadow:0 12px 30px -10px rgba(122,31,43,.6),0 0 0 0 rgba(150,49,61,.45)}50%{box-shadow:0 12px 30px -10px rgba(122,31,43,.6),0 0 0 14px rgba(150,49,61,0)}}
-  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--terracotta);box-shadow:none}
-  .btn.ghost:hover{background:var(--terracotta);color:#fff}
+  @keyframes pulseCta{0%,100%{box-shadow:0 12px 30px -10px rgba(18,112,124,.6),0 0 0 0 rgba(18,112,124,.45)}50%{box-shadow:0 12px 30px -10px rgba(18,112,124,.6),0 0 0 14px rgba(18,112,124,0)}}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--teal);box-shadow:none}
+  .btn.ghost:hover{background:var(--teal);color:#fff}
 
   .offerbar{background:var(--ink);color:var(--cream);text-align:center;font-size:14px;padding:11px 16px;font-weight:500}
   .band{background:var(--tan)}
@@ -59,110 +59,111 @@
   /* HERO */
   header.hero{padding:64px 0 72px;text-align:center}
   .hero .eyebrow{margin-bottom:24px}
-  .hero h1{font-size:clamp(34px,5.4vw,60px);font-weight:600;letter-spacing:-.5px;max-width:900px;margin:0 auto}
-  .hero h1 em{font-style:italic;color:var(--terracotta)}
-  .hero .lead{font-size:19px;color:var(--muted);margin:22px auto 0;max-width:620px}
-  .hero .cover{max-width:660px;width:100%;height:auto;margin:44px auto 0;filter:drop-shadow(0 30px 60px rgba(44,26,31,.22))}
+  .hero h1{font-size:clamp(34px,5.4vw,60px);font-weight:600;letter-spacing:-.3px;max-width:900px;margin:0 auto}
+  .hero h1 em{font-style:italic;color:var(--teal)}
+  .hero .lead{font-size:20px;color:var(--muted);margin:22px auto 0;max-width:630px}
+  .hero .cover{max-width:660px;width:100%;height:auto;margin:44px auto 0;filter:drop-shadow(0 30px 60px rgba(18,59,66,.22))}
   .hero .cover-fallback{max-width:520px;margin:44px auto 0;aspect-ratio:1/.92;background:linear-gradient(150deg,var(--ink),var(--forest));border-radius:22px;position:relative;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:12px;padding:26px;box-shadow:var(--shadow-lg)}
   .hero .cover-fallback .s{background:var(--cream);border-radius:9px}
   .hero .cover-fallback .tag{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-family:var(--sans);font-weight:700;font-size:13px;padding:9px 18px;border-radius:50px}
   .hero .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:44px}
   .hero .badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
-  .badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow)}
+  .badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:14px;font-weight:600;box-shadow:var(--shadow)}
   .badge .dot{color:var(--gold)}
-  .hero .rating{margin-top:22px;font-size:14px;color:var(--muted)}
+  .hero .rating{margin-top:22px;font-size:14.5px;color:var(--muted)}
   .hero .stars{color:var(--gold);letter-spacing:2px}
 
-  /* Marquee amostras (páginas reais do material) */
+  /* Marquee amostras */
   .marquee-wrap{overflow:hidden;padding:8px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-  .marquee{display:flex;gap:18px;width:max-content;animation:marquee 90s linear infinite;will-change:transform}
-  .marquee:hover{animation-play-state:paused}
+  .marquee{display:flex;gap:18px;width:max-content;animation:marquee 140s linear infinite;will-change:transform}
   @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   .sheetcard{width:250px;flex-shrink:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
-  .sheetcard .imgbox{aspect-ratio:3/4;background:linear-gradient(160deg,#fbf5ec,#f0e6d6)}
+  .sheetcard .imgbox{aspect-ratio:3/4;background:linear-gradient(160deg,#eef4f4,#e0ecec)}
   .sheetcard .imgbox img{width:100%;height:100%;object-fit:cover;display:block}
   .center{text-align:center;margin-top:48px}
 
   /* Para quem é */
   .quem{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px;max-width:960px;margin-left:auto;margin-right:auto}
   .qitem{display:flex;gap:14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
-  .qitem .ck{width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
-  .qitem span{font-size:15.5px}
+  .qitem .ck{width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+  .qitem span{font-size:16px}
 
   .promo{max-width:760px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:48px 40px;text-align:center;box-shadow:var(--shadow-lg)}
   .promo .eyebrow{margin-bottom:18px}
   .promo h2{font-size:clamp(26px,3.6vw,38px)}
-  .promo p{color:var(--muted);max-width:560px;margin:14px auto 28px;font-size:17px}
+  .promo p{color:var(--muted);max-width:560px;margin:14px auto 28px;font-size:17.5px}
 
   /* Bônus */
   .bonus{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
   .bcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-  .bcard .top{background:linear-gradient(135deg,#f6ecdd,#efe1cd);padding:22px;display:flex;align-items:center;justify-content:space-between}
+  .bcard .top{background:linear-gradient(135deg,#e6f0f0,#d6e8e8);padding:22px;display:flex;align-items:center;justify-content:space-between}
   .bcard .top .ic{font-size:30px}
   .bcard .top .fls{background:var(--ink);color:var(--gold-soft);font-family:var(--sans);font-weight:700;font-size:12px;padding:4px 11px;border-radius:50px}
   .bcard .bd{padding:24px}
-  .bcard .bn{font-family:var(--sans);font-size:12px;font-weight:800;color:var(--terracotta);letter-spacing:1.5px}
+  .bcard .bn{font-family:var(--sans);font-size:12px;font-weight:800;color:var(--teal);letter-spacing:1.5px}
   .bcard h3{font-size:21px;margin:6px 0 10px}
-  .bcard p{font-size:14px;color:var(--muted);margin-bottom:8px}
-  .bcard .fr{font-size:13px;color:var(--gold);font-weight:600;font-style:italic}
-  .bcard.giftcard{background:linear-gradient(150deg,var(--terracotta),#5e1621);color:#fff;justify-content:center;align-items:center;text-align:center;padding:32px}
-  .bcard.giftcard h3{color:#fff;margin-top:8px}.bcard.giftcard p{color:#f2d9dd}
+  .bcard p{font-size:14.5px;color:var(--muted);margin-bottom:8px}
+  .bcard .fr{font-size:13.5px;color:var(--gold);font-weight:600;font-style:italic}
+  .bcard.giftcard{background:linear-gradient(150deg,var(--teal),var(--forest));color:#fff;justify-content:center;align-items:center;text-align:center;padding:32px}
+  .bcard.giftcard h3{color:#fff;margin-top:8px}.bcard.giftcard p{color:#d8ecec}
 
   /* Passos */
   .passos{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:52px}
   .passo{text-align:center}
-  .passo .n{width:58px;height:58px;border-radius:50%;margin:0 auto 16px;background:var(--paper);border:2px solid var(--gold);color:var(--terracotta);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:23px;box-shadow:var(--shadow)}
+  .passo .n{width:58px;height:58px;border-radius:50%;margin:0 auto 16px;background:var(--paper);border:2px solid var(--gold);color:var(--teal);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:23px;box-shadow:var(--shadow)}
   .passo h3{font-size:18px;margin-bottom:6px}
-  .passo p{font-size:14px;color:var(--muted)}
+  .passo p{font-size:14.5px;color:var(--muted)}
 
   /* Depoimentos */
   .depos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px}
   .depo{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
   .depo .st{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px}
-  .depo p{font-size:15px;margin-bottom:18px;font-style:italic;color:#4a3a36}
+  .depo p{font-size:15.5px;margin-bottom:18px;font-style:italic;color:#3f4d52}
   .depo .who{display:flex;align-items:center;gap:12px}
-  .depo .av{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:18px}
-  .depo .who b{display:block;font-size:15px;font-family:var(--sans)}
+  .depo .av{width:46px;height:46px;border-radius:50%;overflow:hidden;flex-shrink:0;box-shadow:0 2px 6px rgba(18,59,66,.12)}
+  .depo .av svg{display:block;width:100%;height:100%}
+  .depo .who b{display:block;font-size:15.5px;font-family:var(--sans)}
   .depo .who small{color:var(--muted);font-size:13px}
 
   /* Preços */
-  .planos{display:grid;grid-template-columns:1fr;max-width:520px;gap:24px;margin:52px auto 0;align-items:start}
+  .planos{display:grid;grid-template-columns:1fr 1fr;max-width:940px;gap:24px;margin:52px auto 0;align-items:start}
   .plano{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow);position:relative}
   .plano.top{border:2px solid var(--gold);box-shadow:var(--shadow-lg)}
   .plano .flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-family:var(--sans);font-weight:800;font-size:12px;padding:6px 18px;border-radius:50px;text-transform:uppercase;letter-spacing:1px}
-  .plano .kicker{font-family:var(--sans);font-size:12px;font-weight:800;color:var(--terracotta);text-transform:uppercase;letter-spacing:2px}
+  .plano .kicker{font-family:var(--sans);font-size:12px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:2px}
   .plano h3{font-size:25px;margin:8px 0 18px}
   .price{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
-  .price .old{color:#b8a89f;text-decoration:line-through;font-size:18px}
+  .price .old{color:#9aa8ab;text-decoration:line-through;font-size:18px}
   .price .now{font-family:var(--display);font-size:48px;font-weight:700;color:var(--ink)}
   .price .now small{font-size:22px}
   .parcela{color:var(--muted);font-size:15px;margin-bottom:20px}
   .plano ul{list-style:none;margin:20px 0 26px}
-  .plano ul li{display:flex;gap:10px;font-size:15px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .plano ul li{display:flex;gap:10px;font-size:15.5px;padding:8px 0;border-bottom:1px solid var(--line)}
   .plano ul li:before{content:"✓";color:var(--gold);font-weight:900}
-  .plano ul li.bn:before{content:"★";color:var(--terracotta)}
+  .plano ul li.bn:before{content:"★";color:var(--teal)}
   .plano .btn{width:100%}
   .trust{text-align:center;color:var(--muted);font-size:13px;margin-top:16px}
 
   /* Garantia */
   .garantia{text-align:center}
-  .selo{width:130px;height:130px;border-radius:50%;margin:0 auto 26px;background:var(--paper);border:3px solid var(--gold);color:var(--terracotta);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--display);box-shadow:var(--shadow)}
+  .garantia .selo-img{width:160px;height:auto;margin:0 auto 20px;filter:drop-shadow(0 12px 26px rgba(18,59,66,.22))}
+  .selo{width:130px;height:130px;border-radius:50%;margin:0 auto 26px;background:var(--paper);border:3px solid var(--gold);color:var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--display);box-shadow:var(--shadow)}
   .selo b{font-size:42px;line-height:1}
   .selo small{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-top:2px}
-  .garantia p{max-width:640px;margin:16px auto 0;color:var(--muted);font-size:17px}
+  .garantia p{max-width:640px;margin:16px auto 0;color:var(--muted);font-size:17.5px}
 
   /* FAQ */
   .faq{max-width:800px;margin:52px auto 0}
   details{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
-  details summary{cursor:pointer;padding:20px 24px;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:var(--sans)}
+  details summary{cursor:pointer;padding:20px 24px;font-weight:700;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:var(--sans)}
   details summary::-webkit-details-marker{display:none}
   details summary:after{content:"+";font-size:24px;color:var(--gold);font-weight:400}
   details[open] summary:after{content:"–"}
-  details[open] summary{color:var(--terracotta)}
-  details .ans{padding:0 24px 20px;color:var(--muted);font-size:15px}
+  details[open] summary{color:var(--teal)}
+  details .ans{padding:0 24px 20px;color:var(--muted);font-size:15.5px}
 
   @media(max-width:960px){.depos{grid-template-columns:repeat(2,1fr)}.passos{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:820px){.bonus{grid-template-columns:1fr}.quem{grid-template-columns:1fr}}
+  @media(max-width:820px){.bonus{grid-template-columns:1fr}.quem{grid-template-columns:1fr}.planos{grid-template-columns:1fr;max-width:520px}}
   @media(max-width:520px){.depos{grid-template-columns:1fr}.passos{grid-template-columns:1fr}section{padding:56px 0}}
 </style>
 </head>
@@ -211,41 +212,67 @@
   </div>
   <div class="marquee-wrap" style="margin-top:44px">
     <div class="marquee">
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-001.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-013.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-025.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-037.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-049.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-061.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-073.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-085.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-097.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-109.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-121.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-133.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-145.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-157.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-169.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-181.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-193.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-01.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-02.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-03.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-04.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-05.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-06.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-07.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-08.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-09.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-10.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-11.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-12.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-13.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-14.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-15.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-16.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-17.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-18.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-19.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-20.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-21.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-22.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-23.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-24.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-25.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-26.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-27.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-28.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-29.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-30.webp" alt="Folha visual — Técnico de Enfermagem" loading="lazy"></div></figure>
       <!-- duplicado para o loop contínuo -->
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-001.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-013.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-025.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-037.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-049.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-061.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-073.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-085.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-097.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-109.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-121.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-133.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-145.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-157.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-169.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-181.webp" alt="" loading="lazy"></div></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/page-193.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-01.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-02.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-03.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-04.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-05.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-06.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-07.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-08.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-09.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-10.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-11.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-12.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-13.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-14.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-15.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-16.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-17.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-18.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-19.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-20.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-21.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-22.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-23.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-24.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-25.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-26.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-27.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-28.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-29.webp" alt="" loading="lazy"></div></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/c-30.webp" alt="" loading="lazy"></div></figure>
     </div>
   </div>
   <div class="wrap"><div class="center"><a href="#planos" class="btn">Quero acessar todas as folhas</a></div></div>
@@ -276,7 +303,7 @@
     <div class="promo">
       <span class="eyebrow">Condição especial</span>
       <h2>Oferta disponível por tempo limitado</h2>
-      <p>Tenha acesso ao Sistema Visual de Técnico de Enfermagem com o material principal e todos os cinco bônus apresentados nesta página.</p>
+      <p>Tenha acesso ao Sistema Visual de Técnico de Enfermagem com o material principal e todos os bônus apresentados nesta página.</p>
       <a href="#planos" class="btn pulse">Quero garantir meu acesso</a>
     </div>
   </div>
@@ -287,7 +314,7 @@
   <div class="wrap head">
     <span class="eyebrow">Bônus exclusivos</span>
     <h2 class="tit">5 bônus que completam seus <em>estudos</em></h2>
-    <p class="sub">Materiais complementares para facilitar a organização, a revisão e a consulta.</p>
+    <p class="sub">Materiais complementares que acompanham o acesso completo.</p>
   </div>
   <div class="wrap">
     <div class="bonus">
@@ -296,7 +323,7 @@
       <div class="bcard"><div class="top"><span class="ic">🔄</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 3</span><h3>Ficha de Passagem de Plantão</h3><p>Modelo organizado para passar o plantão sem esquecer nenhuma informação do paciente.</p><p class="fr">Comunicação clara entre as equipes.</p></div></div>
       <div class="bcard"><div class="top"><span class="ic">🚑</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 4</span><h3>Guia de Bolso de Emergência</h3><p>Condutas rápidas de PCR, engasgo, choque, hemorragia e sinais de alerta para consulta imediata.</p><p class="fr">Informação essencial na hora que mais importa.</p></div></div>
       <div class="bcard"><div class="top"><span class="ic">📘</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 5</span><h3>Manual de Procedimentos</h3><p>Passo a passo dos principais procedimentos de enfermagem, do preparo ao registro.</p><p class="fr">Técnica correta, com mais segurança e confiança.</p></div></div>
-      <div class="bcard giftcard"><div class="ic" style="font-size:38px">🎁</div><h3>5 bônus inclusos</h3><p>Todos os bônus acompanham o material, sem custo adicional.</p></div>
+      <div class="bcard giftcard"><div class="ic" style="font-size:38px">🎁</div><h3>5 bônus inclusos</h3><p>Todos os bônus acompanham o acesso completo, sem custo adicional.</p></div>
     </div>
   </div>
 </section>
@@ -310,7 +337,7 @@
   </div>
   <div class="wrap">
     <div class="passos">
-      <div class="passo"><div class="n">1</div><h3>Clique no botão</h3><p>Selecione a opção de compra disponível na página.</p></div>
+      <div class="passo"><div class="n">1</div><h3>Clique no botão</h3><p>Selecione o plano de sua preferência na página.</p></div>
       <div class="passo"><div class="n">2</div><h3>Faça o pagamento</h3><p>Preencha seus dados e escolha a forma de pagamento.</p></div>
       <div class="passo"><div class="n">3</div><h3>Pagamento aprovado</h3><p>Após a confirmação, seu acesso será liberado.</p></div>
       <div class="passo"><div class="n">4</div><h3>Receba o material</h3><p>Você receberá as informações de acesso no e-mail cadastrado.</p></div>
@@ -328,14 +355,14 @@
   </div>
   <div class="wrap">
     <div class="depos">
-      <div class="depo"><div class="st">★★★★★</div><p>"Gostei muito da organização. Os mapas ajudam bastante na hora de revisar anatomia."</p><div class="who"><div class="av">A</div><div><b>Ana Beatriz</b><small>Estudante de Enfermagem</small></div></div></div>
-      <div class="depo"><div class="st">★★★★★</div><p>"O conteúdo ficou muito mais fácil de consultar do que minhas anotações espalhadas."</p><div class="who"><div class="av">R</div><div><b>Rafael</b><small>Técnico de Enfermagem</small></div></div></div>
-      <div class="depo"><div class="st">★★★★★</div><p>"As páginas são claras, bonitas e bem divididas por assunto."</p><div class="who"><div class="av">C</div><div><b>Camila</b><small>Auxiliar de Enfermagem</small></div></div></div>
-      <div class="depo"><div class="st">★★★★★</div><p>"Uso principalmente para revisar sinais vitais, medicações e procedimentos."</p><div class="who"><div class="av">J</div><div><b>Juliana</b><small>Técnica de Enfermagem</small></div></div></div>
-      <div class="depo"><div class="st">★★★★★</div><p>"Os comparativos e fluxogramas facilitam muito a memorização para as provas."</p><div class="who"><div class="av">P</div><div><b>Patrícia</b><small>Estudante do técnico</small></div></div></div>
-      <div class="depo"><div class="st">★★★★★</div><p>"As páginas de urgência e sinais de alerta me ajudaram a organizar os estudos."</p><div class="who"><div class="av">L</div><div><b>Lucas</b><small>Técnico de Enfermagem</small></div></div></div>
-      <div class="depo"><div class="st">★★★★★</div><p>"Os pôsteres de anatomia são ótimos, uso para consultar durante os estudos."</p><div class="who"><div class="av">F</div><div><b>Fernanda</b><small>Estudante de Enfermagem</small></div></div></div>
-      <div class="depo"><div class="st">★★★★★</div><p>"As fichas e checklists ajudam a manter tudo em ordem no estágio."</p><div class="who"><div class="av">M</div><div><b>Mariana</b><small>Técnica de Enfermagem</small></div></div></div>
+      <div class="depo"><div class="st">★★★★★</div><p>"Gostei muito da organização. Os mapas ajudam bastante na hora de revisar anatomia."</p><div class="who"><div class="av"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#dcebed"/><path d="M12 72a28 28 0 0 1 56 0Z" fill="#12707c"/><circle cx="40" cy="35" r="15" fill="#f1c9a5"/><path d="M25 34c0-11 30-11 30 0 2-9-4-17-15-17s-17 8-15 17Z" fill="#3a2620"/></svg></div><div><b>Ana Beatriz</b><small>Estudante de Enfermagem</small></div></div></div>
+      <div class="depo"><div class="st">★★★★★</div><p>"O conteúdo ficou muito mais fácil de consultar do que minhas anotações espalhadas."</p><div class="who"><div class="av"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#e6f0f0"/><path d="M12 72a28 28 0 0 1 56 0Z" fill="#0e2f35"/><circle cx="40" cy="35" r="15" fill="#e0b088"/><path d="M26 30a14 14 0 0 1 28 0c1-9-5-15-14-15s-15 6-14 15Z" fill="#241812"/></svg></div><div><b>Rafael</b><small>Técnico de Enfermagem</small></div></div></div>
+      <div class="depo"><div class="st">★★★★★</div><p>"As páginas são claras, bonitas e bem divididas por assunto."</p><div class="who"><div class="av"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#f2ecdd"/><path d="M12 72a28 28 0 0 1 56 0Z" fill="#c79a4e"/><circle cx="40" cy="35" r="15" fill="#f1c9a5"/><path d="M24 36c0-12 32-12 32 0 2-10-5-19-16-19s-18 9-16 19Z" fill="#5b3a24"/></svg></div><div><b>Camila</b><small>Auxiliar de Enfermagem</small></div></div></div>
+      <div class="depo"><div class="st">★★★★★</div><p>"Uso principalmente para revisar sinais vitais, medicações e procedimentos."</p><div class="who"><div class="av"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#dcebed"/><path d="M12 72a28 28 0 0 1 56 0Z" fill="#12707c"/><circle cx="40" cy="35" r="15" fill="#d9a06f"/><path d="M24 36c0-12 32-12 32 0 2-10-5-19-16-19s-18 9-16 19Z" fill="#241812"/></svg></div><div><b>Juliana</b><small>Técnica de Enfermagem</small></div></div></div>
+      <div class="depo"><div class="st">★★★★★</div><p>"Os comparativos e fluxogramas facilitam muito a memorização para as provas."</p><div class="who"><div class="av"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#e6f0f0"/><path d="M12 72a28 28 0 0 1 56 0Z" fill="#0d5a64"/><circle cx="40" cy="35" r="15" fill="#f1c9a5"/><path d="M24 36c0-12 32-12 32 0 2-10-5-19-16-19s-18 9-16 19Z" fill="#6b4a2f"/></svg></div><div><b>Patrícia</b><small>Estudante do técnico</small></div></div></div>
+      <div class="depo"><div class="st">★★★★★</div><p>"As páginas de urgência e sinais de alerta me ajudaram a organizar os estudos."</p><div class="who"><div class="av"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#f2ecdd"/><path d="M12 72a28 28 0 0 1 56 0Z" fill="#123b42"/><circle cx="40" cy="35" r="15" fill="#e0b088"/><path d="M26 30a14 14 0 0 1 28 0c1-9-5-15-14-15s-15 6-14 15Z" fill="#2c1f18"/></svg></div><div><b>Lucas</b><small>Técnico de Enfermagem</small></div></div></div>
+      <div class="depo"><div class="st">★★★★★</div><p>"Os pôsteres de anatomia são ótimos, uso para consultar durante os estudos."</p><div class="who"><div class="av"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#dcebed"/><path d="M12 72a28 28 0 0 1 56 0Z" fill="#c79a4e"/><circle cx="40" cy="35" r="15" fill="#d9a06f"/><path d="M24 36c0-12 32-12 32 0 2-10-5-19-16-19s-18 9-16 19Z" fill="#3a2620"/></svg></div><div><b>Fernanda</b><small>Estudante de Enfermagem</small></div></div></div>
+      <div class="depo"><div class="st">★★★★★</div><p>"As fichas e checklists ajudam a manter tudo em ordem no estágio."</p><div class="who"><div class="av"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#e6f0f0"/><path d="M12 72a28 28 0 0 1 56 0Z" fill="#12707c"/><circle cx="40" cy="35" r="15" fill="#f1c9a5"/><path d="M24 36c0-12 32-12 32 0 2-10-5-19-16-19s-18 9-16 19Z" fill="#241812"/></svg></div><div><b>Mariana</b><small>Técnica de Enfermagem</small></div></div></div>
     </div>
   </div>
 </section>
@@ -344,25 +371,42 @@
 <section class="band" id="planos">
   <div class="wrap head">
     <span class="eyebrow">Oferta especial</span>
-    <h2 class="tit">Garanta seu <em>acesso vitalício</em></h2>
-    <p class="sub">Pague uma única vez e tenha acesso ao material digital completo.</p>
+    <h2 class="tit">Escolha seu <em>acesso vitalício</em></h2>
+    <p class="sub">Pague uma única vez. Escolha o plano ideal para você.</p>
   </div>
   <div class="wrap">
     <div class="planos">
-      <div class="plano top">
-        <span class="flag">Oferta especial</span>
-        <span class="kicker">Acesso ao material</span>
-        <h3>Sistema Visual de Enfermagem</h3>
+      <div class="plano">
+        <span class="kicker">Acesso Essencial</span>
+        <h3>Só o material</h3>
         <div class="price"><span class="old">R$ 97</span><span class="now"><small>R$ </small>19,90</span></div>
         <div class="parcela">à vista</div>
         <ul>
           <li><strong>200 folhas visuais</strong> de Enfermagem</li>
           <li>Anatomia, procedimentos, medicações e emergência</li>
           <li>Arquivos digitais em PDF · acesso imediato</li>
+          <li>Acesso vitalício e pagamento único</li>
+        </ul>
+        <a href="https://pay.wiapy.com/6a6f7a1374c1d4d70c287258" class="btn">Quero o acesso essencial</a>
+      </div>
+      <div class="plano top">
+        <span class="flag">Mais escolhido</span>
+        <span class="kicker">Acesso Completo</span>
+        <h3>Material + 5 Bônus</h3>
+        <div class="price"><span class="old">R$ 197</span><span class="now"><small>R$ </small>29,90</span></div>
+        <div class="parcela">à vista ou 12x de R$ 2,99</div>
+        <ul>
+          <li><strong>200 folhas visuais</strong> de Enfermagem</li>
+          <li>Anatomia, procedimentos, medicações e emergência</li>
+          <li class="bn">Bônus 1: Calculadora de Medicamentos</li>
+          <li class="bn">Bônus 2: Checklists Essenciais para Enfermagem</li>
+          <li class="bn">Bônus 3: Ficha de Passagem de Plantão</li>
+          <li class="bn">Bônus 4: Guia de Bolso de Emergência</li>
+          <li class="bn">Bônus 5: Manual de Procedimentos</li>
           <li>Acesso <strong>vitalício</strong> e pagamento único</li>
           <li>Suporte prioritário</li>
         </ul>
-        <a href="https://pay.wiapy.com/6a6f7a1374c1d4d70c287258" class="btn pulse">Quero acessar agora</a>
+        <a href="COLE_O_LINK_DO_CHECKOUT_COMPLETO" class="btn pulse">Quero acessar com bônus</a>
         <div class="trust">🔒 Compra segura • Acesso digital • Pagamento único</div>
       </div>
     </div>
@@ -372,8 +416,9 @@
 <!-- GARANTIA -->
 <section class="garantia">
   <div class="wrap">
-    <div class="selo"><b>7</b><small>dias</small></div>
-    <h2 class="tit">Garantia de <em>7 dias</em></h2>
+    <img class="selo-img" src="assets/selo-garantia.png" alt="Garantia de 7 dias ou seu dinheiro de volta"
+         onerror="this.style.display='none';document.getElementById('seloFb').style.display='flex'">
+    <div class="selo" id="seloFb" style="display:none"><b>7</b><small>dias</small></div>
     <p>Você terá sete dias, a partir da confirmação da compra, para conhecer o material. Caso ele não corresponda à apresentação desta página, poderá solicitar o cancelamento dentro do prazo da garantia, seguindo as regras informadas no checkout.</p>
   </div>
 </section>
