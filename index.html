@@ -7,7 +7,8 @@
 <meta name="description" content="+200 folhas visuais para estudar Técnico de Enfermagem com clareza: anatomia, procedimentos, medicações, urgência e cuidados.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"></noscript>
 <link rel="preload" as="image" href="assets/capa.webp" fetchpriority="high">
 <style>
   :root{
@@ -74,7 +75,7 @@
 
   /* Marquee amostras (páginas reais do material) */
   .marquee-wrap{overflow:hidden;padding:8px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-  .marquee{display:flex;gap:18px;width:max-content;animation:marquee 90s linear infinite}
+  .marquee{display:flex;gap:18px;width:max-content;animation:marquee 90s linear infinite;will-change:transform}
   .marquee:hover{animation-play-state:paused}
   @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   .sheetcard{width:250px;flex-shrink:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
@@ -349,20 +350,15 @@
   <div class="wrap">
     <div class="planos">
       <div class="plano top">
-        <span class="flag">Oferta completa</span>
-        <span class="kicker">Acesso Completo</span>
-        <h3>Sistema Visual + 5 Bônus</h3>
-        <div class="price"><span class="old">R$ 197</span><span class="now"><small>R$ </small>29,90</span></div>
-        <div class="parcela">à vista ou 12x de R$ 2,99</div>
+        <span class="flag">Oferta especial</span>
+        <span class="kicker">Acesso ao material</span>
+        <h3>Sistema Visual de Enfermagem</h3>
+        <div class="price"><span class="old">R$ 97</span><span class="now"><small>R$ </small>19,90</span></div>
+        <div class="parcela">à vista</div>
         <ul>
           <li><strong>200 folhas visuais</strong> de Enfermagem</li>
           <li>Anatomia, procedimentos, medicações e emergência</li>
           <li>Arquivos digitais em PDF · acesso imediato</li>
-          <li class="bn">Bônus 1: Calculadora de Medicamentos</li>
-          <li class="bn">Bônus 2: Checklists Essenciais para Enfermagem</li>
-          <li class="bn">Bônus 3: Ficha de Passagem de Plantão</li>
-          <li class="bn">Bônus 4: Guia de Bolso de Emergência</li>
-          <li class="bn">Bônus 5: Manual de Procedimentos</li>
           <li>Acesso <strong>vitalício</strong> e pagamento único</li>
           <li>Suporte prioritário</li>
         </ul>
