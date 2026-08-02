@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/capa.webp" fetchpriority="high">
 <style>
   :root{
     --cream:#faf6f1;
@@ -34,7 +35,7 @@
   img{max-width:100%;display:block}
   a{text-decoration:none;color:inherit}
   .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
-  section{padding:80px 0}
+  section{padding:80px 0;content-visibility:auto;contain-intrinsic-size:auto 800px}
   h1,h2,h3{font-family:var(--display);line-height:1.12;color:var(--ink);font-weight:600}
 
   .eyebrow{display:inline-block;background:var(--rose);color:var(--terracotta);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 16px;border-radius:50px}
@@ -62,7 +63,7 @@
   .hero h1{font-size:clamp(34px,5.4vw,60px);font-weight:600;letter-spacing:-.5px;max-width:900px;margin:0 auto}
   .hero h1 em{font-style:italic;color:var(--terracotta)}
   .hero .lead{font-size:19px;color:var(--muted);margin:22px auto 0;max-width:620px}
-  .hero .cover{max-width:660px;margin:44px auto 0;filter:drop-shadow(0 30px 60px rgba(44,26,31,.22))}
+  .hero .cover{max-width:660px;width:100%;height:auto;margin:44px auto 0;filter:drop-shadow(0 30px 60px rgba(44,26,31,.22))}
   .hero .cover-fallback{max-width:520px;margin:44px auto 0;aspect-ratio:1/.92;background:linear-gradient(150deg,var(--ink),var(--forest));border-radius:22px;position:relative;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:12px;padding:26px;box-shadow:var(--shadow-lg)}
   .hero .cover-fallback .s{background:var(--cream);border-radius:9px}
   .hero .cover-fallback .tag{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-family:var(--sans);font-weight:700;font-size:13px;padding:9px 18px;border-radius:50px}
@@ -75,10 +76,10 @@
 
   /* Marquee amostras (imagens reais) */
   .marquee-wrap{overflow:hidden;padding:8px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-  .marquee{display:flex;gap:18px;width:max-content;animation:marquee 60s linear infinite}
+  .marquee{display:flex;gap:18px;width:max-content;animation:marquee 72s linear infinite}
   .marquee:hover{animation-play-state:paused}
   @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-  .sheetcard{width:230px;flex-shrink:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .sheetcard{width:250px;flex-shrink:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
   .sheetcard .imgbox{aspect-ratio:3/4;background:linear-gradient(160deg,#fbf5ec,#f0e6d6);position:relative}
   .sheetcard .imgbox img{width:100%;height:100%;object-fit:cover;display:block}
   .sheetcard .imgbox.ph img{display:none}
@@ -210,8 +211,12 @@
     <span class="eyebrow">Enfermagem de forma visual</span>
     <h1><em>+200 folhas visuais</em> para estudar Técnico de Enfermagem com muito mais clareza</h1>
     <p class="lead">Um sistema completo, ilustrado e organizado para facilitar seus estudos sobre anatomia, procedimentos, medicações, urgência e principais cuidados de enfermagem.</p>
-    <img class="cover" src="assets/capa.png" alt="Sistema Visual de Técnico de Enfermagem — +200 folhas visuais"
-         onerror="this.style.display='none';document.getElementById('coverFb').style.display='grid'">
+    <picture>
+      <source srcset="assets/capa.webp" type="image/webp">
+      <img class="cover" src="assets/capa.png" width="1295" height="1215" fetchpriority="high" decoding="async"
+           alt="Sistema Visual de Técnico de Enfermagem — +200 folhas visuais"
+           onerror="this.style.display='none';document.getElementById('coverFb').style.display='grid'">
+    </picture>
     <div class="cover-fallback" id="coverFb" style="display:none">
       <div class="s"></div><div class="s"></div><div class="s"></div>
       <div class="s"></div><div class="s"></div><div class="s"></div>
@@ -241,27 +246,31 @@
   </div>
   <div class="marquee-wrap" style="margin-top:44px">
     <div class="marquee">
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/01-vias-administracao.png" alt="Vias de Administração de Medicamentos" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Vias de Administração</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/02-angulos-injecao.png" alt="Ângulos de Injeção" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Ângulos de Injeção</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/03-im-deltoide.png" alt="Aplicação Intramuscular — Deltoide" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Deltoide</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/04-im-vasto-lateral.png" alt="Aplicação Intramuscular — Vasto Lateral da Coxa" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Vasto Lateral</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/05-im-ventroglutea.png" alt="Aplicação Intramuscular — Região Ventroglútea" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Ventroglútea</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/06-dorsoglutea.png" alt="Região Dorsoglútea — Técnica dos Quadrantes" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Dorsoglútea — Quadrantes</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/07-tecnica-z.png" alt="Técnica em Z (Z-Track)" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Técnica em Z</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/08-via-subcutanea.png" alt="Via Subcutânea — Sítios e Rodízio" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Via Subcutânea</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/09-via-intradermica.png" alt="Via Intradérmica — Técnica e Leitura" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Via Intradérmica</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/10-13-certos.png" alt="Os 13 Certos da Administração de Medicamentos" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Os 13 Certos</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/01-vias-administracao.webp" alt="Vias de Administração de Medicamentos" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Vias de Administração</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/02-angulos-injecao.webp" alt="Ângulos de Injeção" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Ângulos de Injeção</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/03-im-deltoide.webp" alt="Aplicação Intramuscular — Deltoide" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Deltoide</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/04-im-vasto-lateral.webp" alt="Aplicação Intramuscular — Vasto Lateral da Coxa" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Vasto Lateral</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/05-im-ventroglutea.webp" alt="Aplicação Intramuscular — Região Ventroglútea" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Ventroglútea</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/06-dorsoglutea.webp" alt="Região Dorsoglútea — Técnica dos Quadrantes" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Dorsoglútea — Quadrantes</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/07-tecnica-z.webp" alt="Técnica em Z (Z-Track)" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Técnica em Z</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/08-via-subcutanea.webp" alt="Via Subcutânea — Sítios e Rodízio" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Via Subcutânea</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/09-via-intradermica.webp" alt="Via Intradérmica — Técnica e Leitura" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Via Intradérmica</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/10-13-certos.webp" alt="Os 13 Certos da Administração de Medicamentos" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Os 13 Certos</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/11-opioides.webp" alt="Opioides — Cuidados de Enfermagem e Naloxona" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Opioides e Naloxona</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/12-medicamentos-perigosos.webp" alt="Medicamentos Potencialmente Perigosos — Alta Vigilância" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Alta Vigilância</figcaption></figure>
       <!-- duplicado para o loop contínuo -->
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/01-vias-administracao.png" alt="Vias de Administração de Medicamentos" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Vias de Administração</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/02-angulos-injecao.png" alt="Ângulos de Injeção" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Ângulos de Injeção</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/03-im-deltoide.png" alt="Aplicação Intramuscular — Deltoide" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Deltoide</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/04-im-vasto-lateral.png" alt="Aplicação Intramuscular — Vasto Lateral da Coxa" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Vasto Lateral</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/05-im-ventroglutea.png" alt="Aplicação Intramuscular — Região Ventroglútea" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Ventroglútea</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/06-dorsoglutea.png" alt="Região Dorsoglútea — Técnica dos Quadrantes" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Dorsoglútea — Quadrantes</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/07-tecnica-z.png" alt="Técnica em Z (Z-Track)" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Técnica em Z</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/08-via-subcutanea.png" alt="Via Subcutânea — Sítios e Rodízio" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Via Subcutânea</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/09-via-intradermica.png" alt="Via Intradérmica — Técnica e Leitura" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Via Intradérmica</figcaption></figure>
-      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/10-13-certos.png" alt="Os 13 Certos da Administração de Medicamentos" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Os 13 Certos</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/01-vias-administracao.webp" alt="Vias de Administração de Medicamentos" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Vias de Administração</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/02-angulos-injecao.webp" alt="Ângulos de Injeção" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Ângulos de Injeção</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/03-im-deltoide.webp" alt="Aplicação Intramuscular — Deltoide" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Deltoide</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/04-im-vasto-lateral.webp" alt="Aplicação Intramuscular — Vasto Lateral da Coxa" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Vasto Lateral</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/05-im-ventroglutea.webp" alt="Aplicação Intramuscular — Região Ventroglútea" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">IM — Ventroglútea</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/06-dorsoglutea.webp" alt="Região Dorsoglútea — Técnica dos Quadrantes" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Dorsoglútea — Quadrantes</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/07-tecnica-z.webp" alt="Técnica em Z (Z-Track)" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Técnica em Z</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/08-via-subcutanea.webp" alt="Via Subcutânea — Sítios e Rodízio" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Via Subcutânea</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/09-via-intradermica.webp" alt="Via Intradérmica — Técnica e Leitura" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Via Intradérmica</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/10-13-certos.webp" alt="Os 13 Certos da Administração de Medicamentos" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Os 13 Certos</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/11-opioides.webp" alt="Opioides — Cuidados de Enfermagem e Naloxona" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Opioides e Naloxona</figcaption></figure>
+      <figure class="sheetcard"><div class="imgbox"><img src="assets/carrossel/12-medicamentos-perigosos.webp" alt="Medicamentos Potencialmente Perigosos — Alta Vigilância" loading="lazy" onerror="this.parentElement.classList.add('ph')"></div><figcaption class="lbl">Alta Vigilância</figcaption></figure>
     </div>
   </div>
   <div class="wrap"><div class="center"><a href="#planos" class="btn">Quero acessar todas as folhas</a></div></div>

@@ -1,6 +1,9 @@
 # Arquivos baixados do site original (uso interno, não publicar)
 clone-original/
 
+# PNGs originais pesados do carrossel (usamos as versões .webp otimizadas)
+assets/carrossel/ChatGPT*.png
+
 # Sistema
 Thumbs.db
 .DS_Store
