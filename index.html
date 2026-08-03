@@ -129,6 +129,7 @@
   .planos{display:grid;grid-template-columns:1fr 1fr;max-width:940px;gap:24px;margin:52px auto 0;align-items:start}
   .plano{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow);position:relative}
   .plano.top{border:2px solid var(--gold);box-shadow:var(--shadow-lg)}
+  .plano-img{display:block;width:100%;max-width:190px;height:auto;margin:0 auto 22px;filter:drop-shadow(0 12px 26px rgba(18,59,66,.18))}
   .plano .flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-family:var(--sans);font-weight:800;font-size:12px;padding:6px 18px;border-radius:50px;text-transform:uppercase;letter-spacing:1px}
   .plano .kicker{font-family:var(--sans);font-size:12px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:2px}
   .plano h3{font-size:25px;margin:8px 0 18px}
@@ -379,14 +380,11 @@
     <span class="eyebrow">Oferta especial</span>
     <h2 class="tit">Escolha seu <em>acesso vitalício</em></h2>
     <p class="sub">Pague uma única vez. Escolha o plano ideal para você.</p>
-    <picture>
-      <source srcset="assets/capa.webp" type="image/webp">
-      <img src="assets/capa.png" alt="Sistema Visual de Técnico de Enfermagem" loading="lazy" style="max-width:340px;width:100%;height:auto;margin:36px auto 0;filter:drop-shadow(0 18px 40px rgba(18,59,66,.2))">
-    </picture>
   </div>
   <div class="wrap">
     <div class="planos">
       <div class="plano">
+        <img class="plano-img" src="assets/capa.webp" alt="Sistema Visual de Técnico de Enfermagem" loading="lazy">
         <span class="kicker">Acesso Essencial</span>
         <h3>Só o material</h3>
         <div class="price"><span class="old">R$ 97</span><span class="now"><small>R$ </small>19,90</span></div>
@@ -401,6 +399,7 @@
       </div>
       <div class="plano top">
         <span class="flag">Mais escolhido</span>
+        <img class="plano-img" src="assets/capa.webp" alt="Sistema Visual de Técnico de Enfermagem" loading="lazy">
         <span class="kicker">Acesso Completo</span>
         <h3>Material + 7 Bônus</h3>
         <div class="price"><span class="old">R$ 197</span><span class="now"><small>R$ </small>29,90</span></div>
