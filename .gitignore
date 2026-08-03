@@ -4,6 +4,9 @@ clone-original/
 # PNGs originais pesados do carrossel (usamos as versões .webp otimizadas)
 assets/carrossel/ChatGPT*.png
 
+# PNGs originais pesados dos bônus (usamos as versões .webp otimizadas)
+assets/bonus/img*.png
+
 # Sistema
 Thumbs.db
 .DS_Store
