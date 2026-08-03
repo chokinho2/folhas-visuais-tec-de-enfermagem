@@ -96,6 +96,11 @@
   /* Bônus */
   .bonus{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
   .bcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .bcover{aspect-ratio:3/4;background:linear-gradient(135deg,#e6f0f0,#d6e8e8);position:relative;display:block}
+  .bcover img{width:100%;height:100%;object-fit:cover;display:block}
+  .bcover .ph-ic{display:none}
+  .bcover.ph{display:flex;align-items:center;justify-content:center}
+  .bcover.ph .ph-ic{display:block;font-size:46px}
   .bcard .top{background:linear-gradient(135deg,#e6f0f0,#d6e8e8);padding:22px;display:flex;align-items:center;justify-content:space-between}
   .bcard .top .ic{font-size:30px}
   .bcard .top .fls{background:var(--ink);color:var(--gold-soft);font-family:var(--sans);font-weight:700;font-size:12px;padding:4px 11px;border-radius:50px}
@@ -110,7 +115,7 @@
   /* Passos */
   .passos{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:52px}
   .passo{text-align:center}
-  .passo .n{width:58px;height:58px;border-radius:50%;margin:0 auto 16px;background:var(--paper);border:2px solid var(--gold);color:var(--teal);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:23px;box-shadow:var(--shadow)}
+  .passo .n{width:58px;height:58px;border-radius:50%;margin:0 auto 16px;background:var(--teal);border:2px solid var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:800;font-size:21px;box-shadow:var(--shadow)}
   .passo h3{font-size:18px;margin-bottom:6px}
   .passo p{font-size:14.5px;color:var(--muted)}
 
@@ -336,13 +341,13 @@ src="https://www.facebook.com/tr?id=1752018062481545&ev=PageView&noscript=1"
   </div>
   <div class="wrap">
     <div class="bonus">
-      <div class="bcard"><div class="top"><span class="ic">🧮</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 1</span><h3>Calculadora de Medicamentos</h3><p>Calcule dosagem, gotejamento e diluições com rapidez e segurança no dia a dia.</p><p class="fr">Menos erro no cálculo, mais segurança na medicação.</p></div></div>
-      <div class="bcard"><div class="top"><span class="ic">✅</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 2</span><h3>Checklists Essenciais para Enfermagem</h3><p>Admissão, sinais vitais, medicação, curativo, punção, pré e pós-operatório, alta e emergência.</p><p class="fr">Para acompanhar cada etapa com mais organização.</p></div></div>
-      <div class="bcard"><div class="top"><span class="ic">🔄</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 3</span><h3>Ficha de Passagem de Plantão</h3><p>Modelo organizado para passar o plantão sem esquecer nenhuma informação do paciente.</p><p class="fr">Comunicação clara entre as equipes.</p></div></div>
-      <div class="bcard"><div class="top"><span class="ic">🚑</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 4</span><h3>Guia de Bolso de Emergência</h3><p>Condutas rápidas de PCR, engasgo, choque, hemorragia e sinais de alerta para consulta imediata.</p><p class="fr">Informação essencial na hora que mais importa.</p></div></div>
-      <div class="bcard"><div class="top"><span class="ic">📘</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 5</span><h3>Manual de Procedimentos</h3><p>Passo a passo dos principais procedimentos de enfermagem, do preparo ao registro.</p><p class="fr">Técnica correta, com mais segurança e confiança.</p></div></div>
-      <div class="bcard"><div class="top"><span class="ic">📝</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 6</span><h3>Prontuário e Anotação de Enfermagem</h3><p>O que registrar, como anotar e a importância legal do prontuário no dia a dia.</p><p class="fr">Registro correto protege o paciente e o profissional.</p></div></div>
-      <div class="bcard"><div class="top"><span class="ic">🔬</span><span class="fls">PDF</span></div><div class="bd"><span class="bn">BÔNUS 7</span><h3>Valores de Referência dos Exames Laboratoriais</h3><p>Principais exames e seus valores normais para consulta rápida e interpretação.</p><p class="fr">Interprete resultados com mais segurança.</p></div></div>
+      <div class="bcard"><div class="bcover"><img src="assets/bonus/bonus-1.webp" alt="Calculadora de Medicamentos" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('ph')"><span class="ph-ic">🧮</span></div><div class="bd"><span class="bn">BÔNUS 1</span><h3>Calculadora de Medicamentos</h3><p>Calcule dosagem, gotejamento e diluições com rapidez e segurança no dia a dia.</p><p class="fr">Menos erro no cálculo, mais segurança na medicação.</p></div></div>
+      <div class="bcard"><div class="bcover"><img src="assets/bonus/bonus-2.webp" alt="Checklists Essenciais para Enfermagem" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('ph')"><span class="ph-ic">✅</span></div><div class="bd"><span class="bn">BÔNUS 2</span><h3>Checklists Essenciais para Enfermagem</h3><p>Admissão, sinais vitais, medicação, curativo, punção, pré e pós-operatório, alta e emergência.</p><p class="fr">Para acompanhar cada etapa com mais organização.</p></div></div>
+      <div class="bcard"><div class="bcover"><img src="assets/bonus/bonus-3.webp" alt="Ficha de Passagem de Plantão" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('ph')"><span class="ph-ic">🔄</span></div><div class="bd"><span class="bn">BÔNUS 3</span><h3>Ficha de Passagem de Plantão</h3><p>Modelo organizado para passar o plantão sem esquecer nenhuma informação do paciente.</p><p class="fr">Comunicação clara entre as equipes.</p></div></div>
+      <div class="bcard"><div class="bcover"><img src="assets/bonus/bonus-4.webp" alt="Guia de Bolso de Emergência" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('ph')"><span class="ph-ic">🚑</span></div><div class="bd"><span class="bn">BÔNUS 4</span><h3>Guia de Bolso de Emergência</h3><p>Condutas rápidas de PCR, engasgo, choque, hemorragia e sinais de alerta para consulta imediata.</p><p class="fr">Informação essencial na hora que mais importa.</p></div></div>
+      <div class="bcard"><div class="bcover"><img src="assets/bonus/bonus-5.webp" alt="Manual de Procedimentos" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('ph')"><span class="ph-ic">📘</span></div><div class="bd"><span class="bn">BÔNUS 5</span><h3>Manual de Procedimentos</h3><p>Passo a passo dos principais procedimentos de enfermagem, do preparo ao registro.</p><p class="fr">Técnica correta, com mais segurança e confiança.</p></div></div>
+      <div class="bcard"><div class="bcover"><img src="assets/bonus/bonus-6.webp" alt="Prontuário e Anotação de Enfermagem" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('ph')"><span class="ph-ic">📝</span></div><div class="bd"><span class="bn">BÔNUS 6</span><h3>Prontuário e Anotação de Enfermagem</h3><p>O que registrar, como anotar e a importância legal do prontuário no dia a dia.</p><p class="fr">Registro correto protege o paciente e o profissional.</p></div></div>
+      <div class="bcard"><div class="bcover"><img src="assets/bonus/bonus-7.webp" alt="Valores de Referência dos Exames Laboratoriais" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('ph')"><span class="ph-ic">🔬</span></div><div class="bd"><span class="bn">BÔNUS 7</span><h3>Valores de Referência dos Exames Laboratoriais</h3><p>Principais exames e seus valores normais para consulta rápida e interpretação.</p><p class="fr">Interprete resultados com mais segurança.</p></div></div>
       <div class="bcard giftcard"><div class="ic" style="font-size:38px">🎁</div><h3>7 bônus inclusos</h3><p>Todos os bônus acompanham o acesso completo, sem custo adicional.</p></div>
     </div>
   </div>
